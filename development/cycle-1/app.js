@@ -5,16 +5,8 @@ var messageDisplay = document.querySelector("#message");
 var resetButton = document.querySelector("#reset");
 var modeButtons = document.querySelectorAll(".mode");
 
-var colors = [
-    "rgb(255, 0, 0)",
-    "rgb(0, 255, 0)", 
-    "rgb(0, 0, 255)", 
-    "rgb(255, 255, 0)", 
-    "rgb(255, 0, 255)",
-    "rgb(0, 255, 255)"
-];
+var colors = generateRandomColors(6);
 
-pickedColor = colors[3];
 
 for (i=0; i<squares.length; i++) {
     //apply background colour to all the squares...
@@ -28,7 +20,7 @@ for (i=0; i<squares.length; i++) {
         if(pickedColor === clickedColor) {
             changeColors(pickedColor);
         }
-        //if the user user selected wrong colour....
+        //if the user selected wrong colour....
         else {
             this.style.backgroundColor = "#232323";
             messageDisplay.text = "Wrong Choice!";
@@ -42,14 +34,22 @@ function changeColors(color) {
     }
 }
 
-function pickColor () {
-    // //create a variable for each color R G and B...
-    // var r = Math.floor(Math.random() * 256);
-    // var g = Math.floor(Math.random() * 256);
-    // var b = Math.floor(Math.random() * 256);
-    // var randomColor = "rgb(" + r + "," + " " + g +"," + " " + b + ")";
-    // return randomColor;
-    // 
-    var random  = Math.floor(Math.random() * colors.length);
-    return random;
+function pickColors() {
+    var random = Math.floor(Math.random() * colors.length);
+    return colors[random];
+}
+
+function randomColors() {
+    var r = Math.floor(Math.random() * 256);
+    var g = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    return "rgb(" + r + ", " + b + " ," + g + ")";
+}
+
+function generateRandomColors(num) {
+    var arr = [];
+    for (i=0; i < num; i++) {
+        arr.push(randomColors());
+    }
+    return arr;
 }
