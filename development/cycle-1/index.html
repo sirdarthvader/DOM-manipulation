@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="app.css">
 </head>
 <body>
-<h1>
+<h1 id="header">
 	The Great 
 	<br>
 	<span id="colorDisplay">RGB</span> 
@@ -16,9 +16,13 @@
 <div id="stripe">
 	<button id="reset">New Colors</button>
 	<span id="message"></span>
-	<button class="mode">Easy</button>
-	<button class="mode selected">Hard</button>
+	<button class="easyBtn">Easy</button>
+	<button class="hardBtn selected">Hard</button>
 </div>
+
+<h3>Current Selection: <span id="default-code"></span></h3>
+<h3>Your Selection: <span id="user-code"></span></h3>
+
 
 	<div id="container">
 		<div class="square"></div>
