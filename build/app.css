@@ -72,3 +72,8 @@ button:hover {
 	color: white;
 	background: steelblue;
 }
+.footer {
+	color: #fff;
+	position: fixed;
+	bottom: 0;
+}
