@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Game</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+<h1>
+	The Great 
+	<br>
+	<span id="colorDisplay">RGB</span> 
+	<br>
+	Color Game
+</h1>
+
+<div id="stripe">
+	<button id="reset">New Colors</button>
+	<span id="message"></span>
+	<button class="mode">Easy</button>
+	<button class="mode selected">Hard</button>
+</div>
+
+	<div id="container">
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+    </div>
+<div class="footer">
+    <p>ashish</p>
+</div>
+
+<script type="text/javascript" src="app.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAkAANFFSi7k9jE5m4q8nhVUUrqZxpuHg4",
+    authDomain: "colorgame-f0a09.firebaseapp.com",
+    databaseURL: "https://colorgame-f0a09.firebaseio.com",
+    projectId: "colorgame-f0a09",
+    storageBucket: "colorgame-f0a09.appspot.com",
+    messagingSenderId: "890462059139"
+  };
+  firebase.initializeApp(config);
+</script>
+</body>
+</html>
